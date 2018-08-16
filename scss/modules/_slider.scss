@@ -1,0 +1,53 @@
+.slider {
+	padding-top: 65px;
+
+	&__title {
+		@include font(35px, 700, 42px);
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 60px;
+	}
+
+	&__wrapper {
+		margin-bottom: -75px;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__img {
+		height: 380px;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			min-width: 100%;
+			max-width: auto;
+			border-radius: 5px;
+		}
+	}
+
+	&__arrow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: -40px;
+
+		&-icon {
+			@include size(60px);
+			cursor: pointer;
+			border: 1px solid #000;
+			border-radius: 50%;
+			display: inline-block;
+			background: url('../images/icons/sliderarrow.png') no-repeat 19px 17px;
+
+			&--right {
+				transform: rotate(180deg);
+			}
+		}
+
+		&-text {
+			margin-top: 10px;
+		}
+	}
+}

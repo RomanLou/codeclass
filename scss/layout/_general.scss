@@ -19,7 +19,13 @@ html {
 body, html {
 	min-height: 100%;
 	width: 100%;
+}
+
+body {
+	background: #f2f5f8;
 	font: 300 16px/20px $font;
+	overflow-x: hidden;
+	min-width: 320px;
 }
 
 .clear::after, .clear::before {
