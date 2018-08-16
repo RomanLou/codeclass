@@ -1,11 +1,11 @@
 .header {
-	background: url('../images/background/bg-hero.png') no-repeat 77% bottom, url('../images/background/headerbg.png') no-repeat bottom center, #F3F6F9;
+	background: url('../images/background/headerbg.png') no-repeat bottom center, #F3F6F9;
 	padding: 0 0 330px;
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
-		background: url('../images/background/bg-plus.png') no-repeat center -20px ;
+		background: url('../images/background/bg-plus.png') no-repeat 48% -20px ;
 		padding-top: 35px;
 
 		&-description {
@@ -16,7 +16,7 @@
 		}
 	}
 
-	&__loc, &__phone, &__menu {
+	&__loc, &__phone {
 		height: 36px;
 		border: 1px solid #E5E7E7;
 		border-radius: 18px;
@@ -37,13 +37,7 @@
 			text-decoration: none;
 			color: $main;
 		}
-	}
-
-	&__menu {
-		border-color: transparent;
-		padding: 10px 12px;
-	}
-	
+	}	
 
 	&__title {
 		@include font(49px, 700, 56px);
@@ -61,8 +55,14 @@
 		&:before {
 			content: '';
 			@include size(54px,119px);
-			@include pos($t:-100px, $r:-55px);
+			@include pos($t:-20px, $r:-40px);
 			background: url('../images/arrow-down.png');
 		}
+	}
+
+	&__img-wrapper {
+		height: 160%;
+		width: 150%;
+		background: url('../images/background/bg-hero.png') no-repeat top left;
 	}
 }

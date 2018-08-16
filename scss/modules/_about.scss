@@ -1,8 +1,8 @@
 .about {
-	padding-top: 55px;
+	margin-top: 55px;
 
 	&__title {
-		font: 700 35px/42px 'Muller', sans-serif;
+		@include font (35px, 700, 42px);
 		text-transform: uppercase;
 		margin: 15px 0 50px;
 	}
@@ -18,12 +18,11 @@
 		&-wrapper {
 			width: 120%;
 			background: url('../images/background/bg-notebook.png') no-repeat center center;
-			background-size: contain;
-			padding: 175px 95px 130px 150px;
+			padding: 200px 0 175px;
 		} 
 
 		&-title {
-			@include pos($t:60px, $r:-20px);
+			@include pos($t:100px, $r:-20px);
 			font-weight: 700;
 			font-size: 184px;
 			letter-spacing: -28px;
@@ -32,19 +31,41 @@
 		}
 	}
 
-	&__list-item {
-		margin-bottom: 25px;
+	&__list {
+		margin-left: 28%;
+		margin-right: 23%;
+
+		&-item {
+			margin-bottom: 25px;
+			position: relative;
+
+			&:before {
+				content: '';
+				@include size(13px);
+				background: #f5a526;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: -20px;
+			}
+		}
+	}
+
+	&__arrow {
 		position: relative;
-		display: inline-block;
 
 		&:before {
 			content: '';
-			@include size(13px);
-			background: #f5a526;
-			border-radius: 50%;
-			position: absolute;
-			top: 0;
-			left: -20px;
+			@include size(318px, 63px);
+			@include pos($t: 50%, $l: -90%);
+			background: url('../images/arrow-right.png')
 		}
+	}
+
+	&__start {
+		@include size(245px);
+		@include pos($t: 30%, $r: -27%);
+		background: $blue url('../images/icons/rocket.png') no-repeat center center;
+		border-radius: 50%;	
 	}
 }

@@ -5,20 +5,29 @@
 		margin: 70px 0 50px;
 		font-size: 0;
 		height: 90px;
-		border: 1px solid #999999;
+		border: 1px solid #d7d7d7;
 		border-radius: 5px;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
 		&-item {
-			font: 300 14px/17px 'Muller', sans-serif;
-			width: 20%;
+			@include font (14px, 300, 17px);
+			width: calc(20% - 1px);
 			height: 100%;
+			position: relative;
+
+			&:before {
+				content: '';
+				@include size(1px, 52px);
+				@include pos($t:50%, $l: 0);
+				transform: translateY(-50%);
+				background: #d7d7d7;
+			}
+
+			&:first-child:before {
+				display: none;
+			}
 		}
 
 		&-link {
@@ -41,7 +50,91 @@
 	}
 
 	&__wrapper {
-		height: 465px;
 		background: #fff;
+		padding: 45px 0 50px 95px;
+
+		&-title {
+			@include font(35px, 700, 42px);
+			text-transform: uppercase;
+		}
+
+		&-subtitle {
+			font-weight: 700;
+			margin-bottom: 25px;
+		}
+
+		&-lessons {
+			margin: 50px 0;
+			position: relative;
+
+			&:before {
+				content:'';
+				@include size(445px, 1px);
+				@include pos ($t:-16px, $l:0);
+				background: #e5e7eb;
+			}
+
+			&:after {
+				content:'';
+				@include size(445px, 1px);
+				@include pos ($b:-23px, $l:0);
+				background: #e5e7eb;
+			}
+		}
+	}
+
+	&__moreinfo-link {
+		display: inline-block;
+		color: #f4a019;
+		text-decoration: none;
+		line-height: 16px;
+		margin-bottom: 70px;
+		border-bottom: 1px solid #f4a019;
+	}
+
+	&__moreinfo-icon {
+		display: inline-block;
+		@include size(18px);
+		background: url('../images/icons/mouse.png');
+		margin-right: 15px;
+	}
+
+	&__document {
+		display: inline-block;
+	}
+
+	&__document-link {
+		display: inline-block;
+		color: #3399fe;
+		text-decoration: none;
+		border: 1px solid #3399fe;
+		border-radius: 21px;
+		height: 43px;
+		padding: 0 15px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__document-icon {
+		display: inline-block;
+		@include size(19px, 21px);
+		background: url('../images/icons/pdf.png');
+		margin-right: 20px;
+	}
+
+	&__label {
+		display: inline-block;
+		@include size(80px, 145px);
+		@include pos($t:-20px, $l:78%);
+		background: #f4a019 url('../images/icons/creative.png') no-repeat center center;
+	}
+
+	&__magazine {
+		display: inline-block;
+		@include size(94%, 560px);
+		@include pos($t:150px, $l:36%);
+		background: url('../images/background/magazine.png') no-repeat bottom right;
+		pointer-events: none;
 	}
 }
