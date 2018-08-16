@@ -1,0 +1,50 @@
+.about {
+	padding-top: 55px;
+
+	&__title {
+		font: 700 35px/42px 'Muller', sans-serif;
+		text-transform: uppercase;
+		margin: 15px 0 50px;
+	}
+
+	&__description {
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	&__list{
+		position: relative;
+
+		&-wrapper {
+			width: 120%;
+			background: url('../images/background/bg-notebook.png') no-repeat center center;
+			background-size: contain;
+			padding: 175px 95px 130px 150px;
+		} 
+
+		&-title {
+			@include pos($t:60px, $r:-20px);
+			font-weight: 700;
+			font-size: 184px;
+			letter-spacing: -28px;
+			text-transform: uppercase;
+			color: #e6eaee;
+		}
+	}
+
+	&__list-item {
+		margin-bottom: 25px;
+		position: relative;
+		display: inline-block;
+
+		&:before {
+			content: '';
+			@include size(13px);
+			background: #f5a526;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: -20px;
+		}
+	}
+}

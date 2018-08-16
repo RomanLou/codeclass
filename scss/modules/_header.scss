@@ -1,0 +1,68 @@
+.header {
+	background: url('../images/background/bg-hero.png') no-repeat 77% bottom, url('../images/background/headerbg.png') no-repeat bottom center, #F3F6F9;
+	padding: 0 0 330px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		background: url('../images/background/bg-plus.png') no-repeat center -20px ;
+		padding-top: 35px;
+
+		&-description {
+			display: inline-block;
+			font-size: 14px;
+			line-height: 65px;
+			color: #afb6bd;
+		}
+	}
+
+	&__loc, &__phone, &__menu {
+		height: 36px;
+		border: 1px solid #E5E7E7;
+		border-radius: 18px;
+		margin-top: 13px;
+		padding: 10px 0;
+	}
+
+	&__loc {
+		background: url('../images/icons/maps-and-flags.png') no-repeat 20px center;
+		padding: 10px 10px 10px 50px;
+	}
+
+	&__phone{
+		background: url('../images/icons/phone-receiver.png') no-repeat 20px center;
+		padding: 10px 30px 10px 50px;	
+		
+		&-link {
+			text-decoration: none;
+			color: $main;
+		}
+	}
+
+	&__menu {
+		border-color: transparent;
+		padding: 10px 12px;
+	}
+	
+
+	&__title {
+		@include font(49px, 700, 56px);
+		text-transform: uppercase;
+		margin: 85px 0 40px;
+	}
+
+	&__description {
+		margin: 0 100px 50px 0;
+	}
+
+	&__arrow {
+		position: relative;
+
+		&:before {
+			content: '';
+			@include size(54px,119px);
+			@include pos($t:-100px, $r:-55px);
+			background: url('../images/arrow-down.png');
+		}
+	}
+}
