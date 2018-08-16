@@ -1,7 +1,15 @@
 .menu {
+	height: 36px;
+	margin-top: 13px;
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	&__burger {
 		height: 36px;
-		border: 1px solid #E5E7E7;
-		border-radius: 18px;
-		margin-top: 13px;
-		padding: 10px 0;
+		width: 24px;
+		background: url('../images/icons/ham-menu.png') no-repeat center center;
+		margin-left: 20px;
+	}
 }
