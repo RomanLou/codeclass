@@ -22,6 +22,14 @@
 			max-width: auto;
 			border-radius: 5px;
 		}
+
+		@media (max-width: 960px) {
+			height: 300px;
+		}
+
+		@media (max-width: 480px) {
+			height: 250px;
+		}
 	}
 
 	&__arrow {

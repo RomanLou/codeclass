@@ -56,6 +56,8 @@
 		border-radius: 5px;
 		box-shadow: 0 6px 84px 0 rgba(172, 178, 185 , .16);
 		position: relative;
+    	min-height: 478px;
+
 
 		&-subtitle {
 			font-weight: 700;
@@ -163,6 +165,15 @@
 			border-style: solid;
 			border-width: 16px 0 0 16px;
 			border-color: transparent transparent transparent #d78d17;
+		}
+	}
+
+	&_slider-item {
+		position: absolute;
+		opacity: 0;
+
+		&.active {
+			opacity: 1;		
 		}
 	}
 }

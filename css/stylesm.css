@@ -1,13 +1,1 @@
-
-.courses__wrapper {
-    position: relative;
-    min-height: 478px;
-}
-
-.courses_slider-item {
-    position: absolute;
-    opacity: 0;
-}
-.courses_slider-item.active {
-    opacity: 1;
-}
+//разнес по модулям

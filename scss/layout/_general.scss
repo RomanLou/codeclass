@@ -101,6 +101,16 @@ body {
 		z-index: 3;
 		position: relative;
 	}
+
+	@media (max-width: 960px) {
+		font-size: 30px;
+		line-height: 37px;
+	}
+
+	@media (max-width: 480px) {
+		font-size: 25px;
+		line-height: 32px;
+	}
 }
 
 .magazine {
