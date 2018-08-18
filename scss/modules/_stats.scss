@@ -1,0 +1,115 @@
+.stats{
+	background: #FDFDFD url('../images/background/info-circle.png') no-repeat bottom center;
+	padding-bottom: 190px;
+	
+	&__button-wrapper {
+		text-align: center;
+	}
+
+	&__wrapper {
+		@include size(980px, 375px);
+		margin: 0 auto;
+		position: relative;
+
+		span {
+			display: block;
+			font-size: 40px;
+			line-height: 42px;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+		}
+	}
+
+	&__item {
+
+		position: absolute;
+		width: 220px;
+
+		&--right {
+			text-align: right;
+		}
+
+		&--left {
+			text-align: left;
+		}
+
+		&--center {
+			text-align: center;
+		}
+ 		
+ 		&--lb {
+ 			bottom: 0;
+ 			left: -90px;
+ 		}
+
+ 		&--lc {
+ 			bottom: 50%;
+ 			left: 20px;
+ 		}
+
+ 		&--cc {
+ 			top: -20px;
+ 			left: 36%;
+ 		}
+
+ 		&--rc {
+ 			bottom: 45%;
+ 			right: 10%;
+ 		}
+
+ 		&--rb {
+ 			bottom: 0;
+ 			right: -30px;
+ 		}
+	}
+
+	.container {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			@include size(145px, 169px);
+			@include pos($t: 250px, $l: -22%);
+			background: url('../images/background/circle.png') no-repeat;
+			pointer-events: none;
+		}
+
+		&:after {
+			content: '';
+			display: inline-block;
+			@include size(97px, 112px);
+			@include pos($t: 120px, $r: -22%);
+			background: url('../images/background/circle.png') no-repeat;
+			background-size: contain;
+			pointer-events: none;
+		}
+	}
+
+	.button {
+		padding: 22px 70px 18px;
+	}
+
+	.main-title {
+		margin-top: 80px;
+		position: relative;
+
+		&:before {
+			content: '';
+			@include size(101px, 82px);
+			@include pos($t: -50px, $r: -80px);
+			background: url('../images/arrow-up.png');
+			z-index: 2;
+		}
+
+		&:after {
+			content: 'гарантии';
+			@include pos($t: 15px, $r: -30px);
+			text-transform: uppercase;
+			color: #e6eaee;
+			font-size: 183px;
+			letter-spacing: -28px;
+			opacity: .4;
+		}
+	}
+}

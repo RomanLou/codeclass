@@ -1,0 +1,35 @@
+.tryfree {
+	background: url('../images/background/student.jpg') no-repeat top center;
+	padding-bottom: 85px;
+
+	&__description {
+		color: #8e8e8e;
+		margin: 20px 0 45px;
+	}
+
+	.form {
+		margin-top: -30px;
+		position: relative;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			@include size(145px, 169px);
+			@include pos($t: -80px, $l: -22%);
+			background: url('../images/background/circle.png') no-repeat;
+			pointer-events: none;
+		}
+
+		&:after {
+			content: '';
+			display: inline-block;
+			@include size(105px, 122px);
+			@include pos($b: 15px, $r: -8%);
+			background: url('../images/background/circle.png') no-repeat center center;
+			background-size: contain;
+			pointer-events: none;
+			z-index: 3;
+		}
+	}
+}	
+

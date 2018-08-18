@@ -1,0 +1,61 @@
+.teachers{
+	background: url('../images/background/bg-teacher.png') no-repeat top center;
+	padding: 180px 0 75px;
+	margin-top: -140px;
+
+	&__wrap {
+		margin-top: 200px;
+
+		.main-title {
+			margin-bottom: 75px;
+		}
+	}
+
+	&__form {
+		margin-top: 25px;
+		margin-right: -100px;
+	}
+
+	&__field {
+	display: block;
+	float: left;
+	width: 33%;
+	border: 1px solid #fff;
+	margin-right: 30px;
+	border-radius: 24px;
+	padding: 15px;
+	background: #f8c675;
+	font: 300 16px/20px $font;
+		@include placeholder {
+			color: #fff;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: left;
+		margin-bottom: 40px;
+	}
+
+	&__wrapper-img {
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 45px;
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&__wrapper-link {
+		text-align: center;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $blue;
+		border-bottom: 1px solid;
+	}	
+}

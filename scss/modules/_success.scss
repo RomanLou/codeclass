@@ -1,0 +1,97 @@
+.success {
+	background: url('../images/background/bg-success.png') no-repeat top center;
+	margin-top: -170px;
+	z-index: 1;
+	position: relative;
+	padding-top: 200px;
+	padding-bottom: 180px;
+
+	&__wrapper {
+		width: 100%;
+		background: #fff;
+		margin-top: 80px;
+		padding: 45px 30% 60px 15%;
+		text-align: right;
+		position: relative;
+		border-radius: 5px;
+
+		&-name {
+			@include font(28px, 700, 35px);
+			color: $blue;
+			text-transform: uppercase;
+		}
+
+		&-age {
+			color: #b4b4b4;
+		}
+
+		&-list {
+			margin-top: 35px;
+		}
+
+		&-item {
+			position: relative;
+			margin: 0 30px 20px 0;
+
+			&:before {
+				content: '';
+				@include size(11px);
+				@include pos($t:3px	, $r:-30px);
+				background: #f5a526;
+				border-radius: 50%;
+			}
+		}
+
+		&-img{
+			@include size(200px);
+			@include pos($t:30px, $r:-15%);
+			border-radius: 50%;
+			overflow: hidden;
+
+			img {
+				display: block;
+			}
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 30px;
+
+	&__item {
+		@include size(12px);
+		border: 1px solid #fff;
+		border-radius: 50%;
+		display: inline-block;
+		margin-top: -20px;
+		cursor: pointer;
+	}
+
+	&__arrow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		&-icon {
+			@include size(60px);
+			cursor: pointer;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			display: inline-block;
+			background: url('../images/icons/sliderarrowwhite.png') no-repeat 19px 17px;
+
+			&--right {
+				transform: rotate(180deg);
+			}
+		}
+
+		&-text {
+			color: #fff;
+			margin-top: 10px;
+		}
+	}
+}

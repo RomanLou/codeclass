@@ -1,9 +1,8 @@
 .about {
-	margin-top: 55px;
+	background: #fff;
+	padding-top: 15px;
 
-	&__title {
-		@include font (35px, 700, 42px);
-		text-transform: uppercase;
+	.main-title {
 		margin: 15px 0 50px;
 	}
 
@@ -42,11 +41,9 @@
 			&:before {
 				content: '';
 				@include size(13px);
+				@include pos($t:2px, $l:-20px);
 				background: #f5a526;
 				border-radius: 50%;
-				position: absolute;
-				top: 0;
-				left: -20px;
 			}
 		}
 	}

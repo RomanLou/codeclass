@@ -1,10 +1,8 @@
 .slider {
 	padding-top: 65px;
 
-	&__title {
-		@include font(35px, 700, 42px);
+	.main-title {
 		text-align: center;
-		text-transform: uppercase;
 		margin-bottom: 60px;
 	}
 

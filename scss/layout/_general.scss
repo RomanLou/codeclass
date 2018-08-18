@@ -22,7 +22,7 @@ body, html {
 }
 
 body {
-	background: #f2f5f8;
+	background: #f3f7fa;
 	font: 300 16px/20px $font;
 	overflow-x: hidden;
 	min-width: 320px;
@@ -52,12 +52,13 @@ body {
 	text-decoration: none;
 	text-transform: uppercase;
 	font: 700 18px $font;
-	padding: 21px 27px 19px;
+	padding: 22px 27px 18px;
 	background: $orange;
 	color: #fff;
 	border-radius: 31px;
 	box-shadow: inset 0 6px 27px 0 rgba(255, 255, 255, .35), 2px 4px 0 0 #c67f0e;
 	margin-bottom: 2px;
+	cursor: pointer;
 
 	&:hover{
 		box-shadow: inset 0 6px 27px 0 rgba(255, 255, 255, .35), 2px 4px 0 0 #c67f0e, 0 7px 30px 0 $orange;
@@ -68,6 +69,38 @@ body {
 		margin: 2px 0 0 0 ;
 	}
 
+	&--blue {
+		background: $blue;
+		box-shadow: inset 0 6px 27px 0 rgba(255, 255, 255, .35), 2px 4px 0 0 #3283d5;
+		padding: 15px 40px;
+		
+		&:hover{
+		box-shadow: inset 0 6px 27px 0 rgba(255, 255, 255, .35), 2px 4px 0 0 #3283d5, 0 7px 30px 0 $blue;
+		}
+		
+		&:active {
+		box-shadow: inset 0 6px 27px 0 rgba(255, 255, 255, .35);
+		margin: 2px 0 0 0 ;
+		}
+	}
+}
+
+.main-title {
+	@include font (35px, 700, 42px);
+	text-transform: uppercase;
+
+	&--white {
+		color: #fff;
+	}
+
+	&--right {
+		text-align: right;
+	}
+
+	&--indexed {
+		z-index: 3;
+		position: relative;
+	}
 }
 
 .orange, .blue, .bold{

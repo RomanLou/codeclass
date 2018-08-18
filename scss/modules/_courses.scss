@@ -1,5 +1,6 @@
 .courses {
 	background:#F3F6F9;
+	padding-bottom: 300px; //исправь
 
 	&__list {
 		margin: 70px 0 50px;
@@ -52,11 +53,6 @@
 	&__wrapper {
 		background: #fff;
 		padding: 45px 0 50px 95px;
-
-		&-title {
-			@include font(35px, 700, 42px);
-			text-transform: uppercase;
-		}
 
 		&-subtitle {
 			font-weight: 700;
@@ -132,7 +128,7 @@
 
 	&__magazine {
 		display: inline-block;
-		@include size(94%, 560px);
+		@include size(94%, 600px);
 		@include pos($t:150px, $l:36%);
 		background: url('../images/background/magazine.png') no-repeat bottom right;
 		pointer-events: none;

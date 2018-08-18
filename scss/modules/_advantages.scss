@@ -1,0 +1,43 @@
+.advantages {
+	margin-bottom: 120px;
+
+	.main-title {
+		text-align: center;
+		margin-bottom: 70px; 
+		position: relative;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			@include size(145px, 169px);
+			@include pos($t: -120px, $l: 0);
+			background: url('../images/background/circle.png') no-repeat;
+			pointer-events: none;
+		}
+
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: left;
+		margin-bottom: 95px;
+	}
+
+	&__item {
+		display: block;
+		height: 105px;
+		min-width: 105px;
+		border: 1px solid $blue;
+		border-radius: 50%;
+		position: relative;
+		margin-right: 30px;
+
+		&-img {
+			@include pos(absolute, 0, 0, 0, 0);
+			margin: auto;
+		}
+	}
+	
+}
