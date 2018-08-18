@@ -1,0 +1,51 @@
+.popup {
+    position: fixed;
+    width: 730px;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: 10001;
+    display: none;
+
+    &:before {
+	    content: "";
+	    display: inline-block;
+	    width: 145px;
+	    height: 169px;
+	    @include pos($t: -50px, $r: -20px);
+	    background: url(../images/background/circle.png) no-repeat;
+	    pointer-events: none;
+	}
+
+	&:after {
+	    content: "";
+	    display: inline-block;
+	    width: 145px;
+	    height: 169px;
+	    @include pos($b: -50px, $l: -100px);
+	    background: url(../images/background/circle.png) no-repeat;
+	    pointer-events: none;
+	}
+
+    .form {
+    	padding-right: 65px;
+    }
+
+    .magazine {
+    	width: 110%;
+    	top: 0;
+    	transform: translate(10%,-10%);
+    	background-size: contain;
+
+    	&:after {
+		    content: "";
+		    display: inline-block;
+		    @include size(200px);
+		    @include pos($b: -15%, $l: 35%);
+		    background: url(../images/background/bg-plusblur.png) no-repeat;
+		    background-size: contain;
+		    pointer-events: none;
+		}
+    }
+}

@@ -103,6 +103,25 @@ body {
 	}
 }
 
+.magazine {
+	display: inline-block;
+	@include size(94%, 600px);
+	@include pos($t:150px, $l:36%);
+	background: url('../images/background/magazine.png') no-repeat bottom right;
+	pointer-events: none;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #00000077;
+    z-index: 10000;
+    display: none;
+} 
+
 .orange, .blue, .bold{
 	font-weight: 700;
 }

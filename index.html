@@ -10,6 +10,7 @@
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/styles.min.css">
+	<link rel="stylesheet" href="css/stylesm.css">
 
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,13 +35,24 @@
 				<div class="menu">
 					<p class="menu__text">Меню</p>
 					<i class="menu__burger"></i>
+					<div class="menu__wrapper">
+						<ul class="menu__list">
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Обучение</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Курсы</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Преимущества</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Выпускники</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Отзывы</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Преподаватели</a></li>
+							<li class="menu__list-item"><a href="#" class="menu__list-link">Школы</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-5 offset-1">
 					<h1 class="header__title">Создайте  надежное  будущее для  своих детей</h1>
 					<p class="header__description header__arrow">Старания родителей - залог успешного будущего каждого ребенка.</p>
-					<a href="#" class="button">Создать будущeе ребенку!</a>
+					<a onclick="openModal()" class="button">Создать будущeе ребенку!</a>
 				</div>
 				<div class="col-6">
 					<div class="header__img-wrapper"></div>
@@ -75,45 +87,132 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-10 offset-1">
-					<ul class="courses__list">
+					<ul id="slider_courses-indicators" class="courses__list">
 						<li class="courses__list-item">
-							<a class="courses__list-link courses__list-link--active" href="#">Курс  Вундеркинд<br>для детей<br>(~ 5-6 лет)</a>
+							<a class="courses__list-link courses__list-link--active">Курс  Вундеркинд<br>для детей<br>(~ 5-6 лет)</a>
 						</li>
 						<li class="courses__list-item">
-							<a class="courses__list-link" href="#">Курс Junior<br>для детей<br>(~ 7-8 лет)</a>
+							<a class="courses__list-link">Курс Junior<br>для детей<br>(~ 7-8 лет)</a>
 						</li>
 						<li class="courses__list-item">
-							<a class="courses__list-link" href="#">Middle<br>для детей<br>(~ 9- 10 лет)</a>
+							<a class="courses__list-link">Middle<br>для детей<br>(~ 9- 10 лет)</a>
 						</li>
 						<li class="courses__list-item">
-							<a class="courses__list-link" href="#">High<br>для детей<br>(~ 10-12 лет)</a>
+							<a class="courses__list-link">High<br>для детей<br>(~ 10-12 лет)</a>
 						</li>
 						<li class="courses__list-item">
-							<a class="courses__list-link" href="#">Super<br>для детей<br>(~ 12-15 лет)</a>
+							<a class="courses__list-link">Super<br>для детей<br>(~ 12-15 лет)</a>
 						</li>
 						<li class="courses__list-item">
-							<a class="courses__list-link" href="#">Expert<br>для детей<br>(~ 12-15 лет)</a>
+							<a class="courses__list-link">Expert<br>для детей<br>(~ 12-15 лет)</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-9 offset-1">
-					<div class="courses__wrapper">
-						<h3 class="main-title">Курс Junior</h3>
-						<p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
-						<p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
-						<p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
-						<div class="courses__moreinfo">
-							<a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+			</div>
+			<div class="row">
+				<div class="col-1 slider__arrow">
+					<i class="slider__arrow-icon slider__arrow-icon--left"></i>
+				</div>
+				<div class="col-9">
+				    <!-- Slider with courses info -->
+					<div id="slider_courses" class="courses__wrapper">
+					    <div class="courses_slider-item active">
+                            <h3 class="main-title">Курс Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
 						</div>
-						<div class="courses__document">
-							<a href="#" class="courses__document-link">
-								<i class="courses__document-icon"></i>
-								<span class="link-text">получить программу обучения</span>
-							</a>
+					    <div class="courses_slider-item">
+                            <h3 class="main-title">Курс 2 Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
+						</div>
+					    <div class="courses_slider-item">
+                            <h3 class="main-title">Курс 3 Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
+						</div>
+					    <div class="courses_slider-item">
+                            <h3 class="main-title">Курс 4 Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
+						</div>
+					    <div class="courses_slider-item">
+                            <h3 class="main-title">Курс 5 Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
+						</div>
+					    <div class="courses_slider-item">
+                            <h3 class="main-title">Курс 6 Junior</h3>
+                            <p class="courses__wrapper-subtitle">уверенное начало для Вашего ребенка</p>
+                            <p class="courses__wrapper-text">Курс Junior для детей 1-2 класса<br>общеобразовательной школы (~ 7-8 лет)</p>
+                            <p class="courses__wrapper-lessons"><span class="bold">Длительность:</span> ​ 1 учебный год - 32 занятия по 1,5 часа</p>
+                            <div class="courses__moreinfo">
+                                <a href="#" class="courses__moreinfo-link"><i class="courses__moreinfo-icon"></i>подробнее о курсе</a>
+                            </div>
+                            <div class="courses__document">
+                                <a href="#" class="courses__document-link">
+                                    <i class="courses__document-icon"></i>
+                                    <span class="link-text">получить программу обучения</span>
+                                </a>
+                            </div>
 						</div>
 					</div>
+					<!-- END slider with courses info -->
 					<div class="courses__label"></div>
-					<div class="courses__magazine"></div>
+					<div class="magazine"></div>
+				</div>
+				<div class="col-1 offset-1 slider__arrow">
+					<i class="slider__arrow-icon slider__arrow-icon--right"></i>
 				</div>	
 			</div>
 		</div>
@@ -277,7 +376,7 @@
 			</div>
 			<div class="row">
 				<div class="col-4 offset-1">
-					<p class="main-title"><span class="main-title--indexed"><span class="orange">1320 родителей</span> доверяют нам своих детей сегодня</p></span>
+					<p class="main-title"><span class="main-title--indexed"><span class="orange">1320 родителей</span> доверяют нам своих детей сегодня</span></p>
 				</div>
 			</div>
 			<div class="stats__wrapper">
@@ -448,8 +547,36 @@
 			</div>
 		</div>
 	</footer>
+	<div id="overlay"></div>
+	<div class="popup" id="popup">
+		<div class="row">
+			<div class="col-8">
+				<form class="form" action="#">
+					<h2 class="main-title">Оставь<br>заявку</span></h2>
+					<input type="text" name="name" class="field" placeholder="Имя, например: Наталия">
+					<input type="email" name="email" class="field" placeholder="Еmail, например: natalia@mail.ru">
+					<input type="text" name="phone" class="field" placeholder="Телефон, например: +7 (099) 945-54-54">
+					<button class="button">Записаться сейчас!</button>
+				</form>
+			</div>
+		</div>
+		<div class="magazine"></div>
+	</div>
+    <script>
+        function openModal() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        }
+        document.getElementById('overlay').onclick = function () {
+            console.log('test');
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+	
 
 	<script src="js/main.js"></script>
+	<script src="js/slider.js"></script>
 <!-- LiveReload Script -->
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
